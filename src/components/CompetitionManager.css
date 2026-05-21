@@ -1,0 +1,205 @@
+.competition-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 필터링 바 */
+.filter-card {
+  padding: 20px 24px;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .filter-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.filter-grid .form-group {
+  margin-bottom: 0;
+}
+
+/* 비교 분석 카드 */
+.comparison-card {
+  padding: 24px;
+  background: var(--glass-bg);
+  border-left: 4px solid var(--accent);
+}
+
+.comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.comparison-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.comparison-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.comp-item-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition);
+}
+
+.comp-item-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.comp-item-title h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.comp-item-dept {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.comp-item-badges {
+  display: flex;
+  gap: 6px;
+}
+
+.comp-item-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+}
+
+.comp-stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.comp-stat-row strong {
+  color: var(--text-primary);
+}
+
+.comp-stat-row.rate-row {
+  font-weight: 600;
+}
+
+.rate-text {
+  color: var(--accent) !important;
+  font-size: 14px;
+}
+
+.comp-bar-container {
+  height: 6px;
+  background: var(--border-color);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.comp-bar {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 3px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 테이블 스타일 연계 */
+.table-card {
+  padding: 8px;
+}
+
+.row-checked td {
+  background: var(--accent-light) !important;
+}
+
+.cell-bold {
+  font-weight: 600;
+}
+
+.cell-rate {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.table-actions {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.table-actions .btn {
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.btn-delete:hover {
+  background: rgba(239, 68, 68, 0.1) !important;
+  color: var(--danger) !important;
+  border-color: var(--danger) !important;
+}
+
+.table-empty {
+  text-align: center;
+  color: var(--text-tertiary);
+  padding: 40px 0 !important;
+}
+
+/* 모달 그리드 및 계산 정보 */
+.modal-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 480px) {
+  .modal-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.calc-rate-preview {
+  background: var(--bg-primary);
+  border: 1px dashed var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.calc-rate-preview strong {
+  font-size: 16px;
+  color: var(--accent);
+  margin-left: 8px;
+}
